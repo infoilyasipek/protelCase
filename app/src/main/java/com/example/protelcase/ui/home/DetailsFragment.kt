@@ -13,39 +13,35 @@ import com.example.protelcase.R
 import com.example.protelcase.databinding.FragmentDetailsBinding
 
 
-class DetailsFragment : Fragment(),View.OnClickListener {
+class DetailsFragment : Fragment(), View.OnClickListener {
 
     companion object {
-
         private const val TAG = "DetailsFragment"
     }
 
     private lateinit var binding: FragmentDetailsBinding
-
     private val args by navArgs<DetailsFragmentArgs>()
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
 
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
         val dataBinding = FragmentDetailsBinding.inflate(inflater, container, false).also {
             it.handler = this
             it.news = args.newsItem
         }
         binding = dataBinding
         return dataBinding.root
-
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.iv_back -> {
+            R.id.imageViewBack -> {
                 findNavController().popBackStack()
             }
-            R.id.bu_viewMore -> {
+            R.id.buttonViewMore -> {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(args.newsItem.url)))
             }
         }
     }
-
 }

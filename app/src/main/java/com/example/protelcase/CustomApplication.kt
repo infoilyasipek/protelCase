@@ -1,17 +1,7 @@
 package com.example.protelcase
 
 import android.app.Application
-import com.example.protelcase.db.CaseDb
-import com.example.protelcase.util.SharedPrefsHelper
+import dagger.hilt.android.HiltAndroidApp
 
-class CustomApplication: Application() {
-    override fun onCreate() {
-        super.onCreate()
-        SharedPrefsHelper.init(this)
-
-    }
-
-    fun getDatabase(): CaseDb? {
-        return CaseDb.getCaseDb(this)
-    }
-}
+@HiltAndroidApp
+class CustomApplication: Application()

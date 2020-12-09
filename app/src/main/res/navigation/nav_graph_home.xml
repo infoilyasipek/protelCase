@@ -28,6 +28,6 @@
 
         <argument
             android:name="newsItem"
-            app:argType="com.example.protelcase.data.model.News" />
+            app:argType="com.example.domain.models.News" />
     </fragment>
 </navigation>

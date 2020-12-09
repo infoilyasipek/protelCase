@@ -34,7 +34,6 @@ object AppExecutors{
     private val networkIO: Executor = Executors.newFixedThreadPool(3)
     private val mainThread: Executor = MainThreadExecutor()
 
-
     fun diskIO(): Executor {
         return diskIO
     }

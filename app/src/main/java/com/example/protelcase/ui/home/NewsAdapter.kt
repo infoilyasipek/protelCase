@@ -1,14 +1,11 @@
 package com.example.protelcase.ui.home
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.protelcase.R
-import com.example.protelcase.data.model.News
+import com.example.domain.models.News
 import com.example.protelcase.databinding.ItemNewsBinding
 import com.example.protelcase.interfaces.OnItemClickedListener
 
@@ -17,19 +14,15 @@ class NewsAdapter(private val listener: OnItemClickedListener) :
     ListAdapter<News, NewsAdapter.WeatherViewHolder>(NewsDiffCallBack()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherViewHolder {
-
         val binding = ItemNewsBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return WeatherViewHolder(binding)
-
     }
 
     override fun onBindViewHolder(holder: WeatherViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
-
     inner class WeatherViewHolder(private val binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
-
         init {
             binding.root.setOnClickListener {
                 listener.onItemClicked(adapterPosition)
@@ -38,9 +31,6 @@ class NewsAdapter(private val listener: OnItemClickedListener) :
         fun bind(news: News){
             binding.news = news
         }
-
-
-
     }
 
     class NewsDiffCallBack: DiffUtil.ItemCallback<News>(){
@@ -51,10 +41,5 @@ class NewsAdapter(private val listener: OnItemClickedListener) :
         override fun areContentsTheSame(oldItem: News, newItem: News): Boolean {
             return oldItem == newItem
         }
-
     }
-
-
-
-
 }

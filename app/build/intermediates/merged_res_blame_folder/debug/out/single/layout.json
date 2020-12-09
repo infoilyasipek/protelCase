@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\ilyas\\AndroidStudioProjects\\ProtelCase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_details.xml",
+        "source": "C:\\Users\\ilyas\\AndroidStudioProjects\\ProtelCase\\app\\src\\main\\res\\layout\\fragment_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\ilyas\\AndroidStudioProjects\\ProtelCase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_news.xml",
+        "source": "C:\\Users\\ilyas\\AndroidStudioProjects\\ProtelCase\\app\\src\\main\\res\\layout\\item_news.xml"
+    }
+]

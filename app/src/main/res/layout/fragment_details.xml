@@ -9,7 +9,7 @@
             type="android.view.View.OnClickListener" />
         <variable
             name="news"
-            type="com.example.protelcase.data.model.News" />
+            type="com.example.domain.models.News" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,7 @@
 
 
             <ImageView
-                android:id="@+id/iv_back"
+                android:id="@+id/imageViewBack"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:onClick="@{handler::onClick}"
@@ -43,7 +43,7 @@
                 android:text="Details"
                 android:textSize="18sp"
                 android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/iv_back"
+                android:layout_toEndOf="@+id/imageViewBack"
                 android:textColor="@color/black" />
 
 
@@ -53,7 +53,7 @@
         <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/bu_viewMore"
+            app:layout_constraintBottom_toTopOf="@+id/buttonViewMore"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
@@ -64,7 +64,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_title"
+                    android:id="@+id/textViewTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
@@ -82,7 +82,7 @@
                     android:layout_height="40dp">
 
                     <ImageView
-                        android:id="@+id/iv_date"
+                        android:id="@+id/imageViewDate"
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:layout_centerVertical="true"
@@ -96,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="8dp"
-                        android:layout_toEndOf="@+id/iv_date"
+                        android:layout_toEndOf="@+id/imageViewDate"
                         android:text="@{news.publishedAt}"
                         tools:text="06 Eyl - 12:33" />
 
@@ -111,7 +111,7 @@
                         android:background="@color/dividerColor" />
 
                     <TextView
-                        android:id="@+id/tv_source"
+                        android:id="@+id/textViewSource"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -125,7 +125,7 @@
                 </RelativeLayout>
 
                 <ImageView
-                    android:id="@+id/iv_cover"
+                    android:id="@+id/imageViewCover"
                     imageUrl="@{news.urlToImage}"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
@@ -142,7 +142,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:text="@{news.description}"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_cover"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewCover"
 
                     tools:text="With England in another national lockdown, we asked BBC Sport readers to tell us about the last football match they attended." />
 
@@ -161,14 +161,14 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:text="@{news.author != null ? `Author: ` +news.author : `` }"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_cover"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewCover"
                     tools:text="Author: ilyas ipek" />
 
             </LinearLayout>
         </ScrollView>
 
         <Button
-            android:id="@+id/bu_viewMore"
+            android:id="@+id/buttonViewMore"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"

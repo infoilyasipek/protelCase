@@ -6,7 +6,7 @@
     <data>
         <variable
             name="news"
-            type="com.example.protelcase.data.model.News" />
+            type="com.example.domain.models.News" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,7 +32,7 @@
 
 
                 <ImageView
-                    android:id="@+id/iv_cover"
+                    android:id="@+id/imageViewCover"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     imageUrl="@{news.urlToImage}"
@@ -43,7 +43,7 @@
                     app:srcCompat="@color/black" />
 
                 <TextView
-                    android:id="@+id/tv_title"
+                    android:id="@+id/textViewTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
@@ -54,11 +54,11 @@
                     android:text="@{news.title}"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_cover"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewCover"
                     tools:text="Football before lockdown: Your last football match before lockdown" />
 
                 <TextView
-                    android:id="@+id/tv_description"
+                    android:id="@+id/textViewDescription"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
@@ -71,7 +71,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_cover" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewCover" />
 
 
                 <RelativeLayout
@@ -90,7 +90,7 @@
                         android:background="@color/dividerColor" />
 
                     <TextView
-                        android:id="@+id/tv_date"
+                        android:id="@+id/textViewDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -99,7 +99,7 @@
                         tools:text="06 Eyl - 12:33" />
 
                     <TextView
-                        android:id="@+id/tv_source"
+                        android:id="@+id/textViewSource"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
