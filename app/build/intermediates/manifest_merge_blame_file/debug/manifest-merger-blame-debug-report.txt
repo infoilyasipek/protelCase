@@ -22,8 +22,8 @@
 16
 17    <application
 17-->C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:9:5-26:19
-18        android:name="com.example.protelcase.CustomApplication"
-18-->C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:13:9-42
+18        android:name="com.example.protelcase.ProtelCaseApplication"
+18-->C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:13:9-46
 19        android:allowBackup="true"
 19-->C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:10:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"

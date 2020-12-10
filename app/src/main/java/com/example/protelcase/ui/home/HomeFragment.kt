@@ -37,17 +37,17 @@ class HomeFragment : Fragment() {
         NewsAdapter(object : OnItemClickedListener {
             override fun onItemClicked(position: Int) {
                 findNavController().navigate(
-                    HomeFragmentDirections.actionHomeFragmentToDetailsFragment(
-                        newsAdapter.currentList[position]
-                    )
+                        HomeFragmentDirections.actionHomeFragmentToDetailsFragment(
+                                newsAdapter.currentList[position]
+                        )
                 )
             }
         })
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
@@ -93,11 +93,17 @@ class HomeFragment : Fragment() {
                     swipeRefreshLayoutNews.isRefreshing = false
                     if (newsAdapter.currentList.isEmpty()) {
                         relativeLayoutError.visible()
-                    } else if (!isNetworkAvailable()) {
-                        toast("Check your internet connection")
+                        if (isNetworkAvailable().not()) {
+                            toast("Check your internet connections")
+                        }
                     } else {
-                        toast("Something went wrong")
+                        if (isNetworkAvailable().not()) {
+                            toast("Check your internet connections")
+                        } else {
+                            toast("Something went wrong")
+                        }
                     }
+
                 }
             }
         }
@@ -114,15 +120,15 @@ class HomeFragment : Fragment() {
         imageViewFilter.setOnClickListener {
             val dateFilter = homeViewModel.dateFilter.value?.toCalendar(Constants.DATE_FORMAT)!!
             DatePickerDialog(
-                requireContext(),
-                { view, year, month, dayOfMonth ->
-                    homeViewModel.setDateFilter("$year-${month + 1}-${if (dayOfMonth < 10) "0" else ""}$dayOfMonth")
-                },
-                dateFilter.get(Calendar.YEAR),
-                dateFilter.get(Calendar.MONTH),
-                dateFilter.get(Calendar.DAY_OF_MONTH)
+                    requireContext(),
+                    { _, year, month, dayOfMonth ->
+                        homeViewModel.setDateFilter("$year-${month + 1}-${if (dayOfMonth < 10) "0" else ""}$dayOfMonth")
+                    },
+                    dateFilter.get(Calendar.YEAR),
+                    dateFilter.get(Calendar.MONTH),
+                    dateFilter.get(Calendar.DAY_OF_MONTH)
             )
-                .show()
+                    .show()
         }
 
         imageViewRetry.setOnClickListener {

@@ -129,7 +129,7 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\ilyas\.gradle
 	android:usesCleartextTraffic
 		ADDED from C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:14:9-44
 	android:name
-		ADDED from C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:13:9-42
+		ADDED from C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:13:9-46
 activity#com.example.protelcase.ui.home.HomeActivity
 ADDED from C:\Users\ilyas\AndroidStudioProjects\ProtelCase\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name

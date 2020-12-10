@@ -1,4 +1,4 @@
-#Wed Dec 09 16:13:57 EET 2020
+#Thu Dec 10 11:55:10 EET 2020
 base.2=C\:\\Users\\ilyas\\AndroidStudioProjects\\ProtelCase\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.1=C\:\\Users\\ilyas\\AndroidStudioProjects\\ProtelCase\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
 base.0=C\:\\Users\\ilyas\\AndroidStudioProjects\\ProtelCase\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex

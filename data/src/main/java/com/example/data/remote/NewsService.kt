@@ -9,7 +9,6 @@ import retrofit2.http.Query
 interface NewsService {
 
     @GET("everything?apiKey=${Constants.API_KEY}")
-    @Headers("Accept: application/json")
     fun getNews(@Query("q") q: String, @Query("from") from: String, @Query("sortBy") sortBy: String): Single<NewsResponse>
 
 }

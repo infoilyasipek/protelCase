@@ -17,7 +17,6 @@
         android:layout_height="match_parent"
         tools:context=".ui.home.DetailsFragment">
 
-
         <RelativeLayout
             android:id="@+id/relativeLayout2"
             android:layout_width="0dp"
@@ -25,7 +24,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
 
             <ImageView
                 android:id="@+id/imageViewBack"
@@ -46,9 +44,7 @@
                 android:layout_toEndOf="@+id/imageViewBack"
                 android:textColor="@color/black" />
 
-
         </RelativeLayout>
-
 
         <ScrollView
             android:layout_width="0dp"
@@ -75,7 +71,6 @@
                     android:textStyle="bold"
                     tools:text="Football before lockdown: Your last football match before lockdown" />
 
-
                 <RelativeLayout
                     android:id="@+id/relativeLayout"
                     android:layout_width="match_parent"
@@ -99,7 +94,6 @@
                         android:layout_toEndOf="@+id/imageViewDate"
                         android:text="@{news.publishedAt}"
                         tools:text="06 Eyl - 12:33" />
-
 
                     <View
                         android:id="@+id/divider"
@@ -133,7 +127,6 @@
                     android:scaleType="centerCrop"
                     app:srcCompat="@color/black" />
 
-
                 <TextView
                     android:id="@+id/tv_description"
                     android:layout_width="wrap_content"
@@ -143,9 +136,7 @@
                     android:layout_marginBottom="16dp"
                     android:text="@{news.description}"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewCover"
-
                     tools:text="With England in another national lockdown, we asked BBC Sport readers to tell us about the last football match they attended." />
-
 
                 <View
                     android:layout_width="match_parent"
@@ -165,6 +156,7 @@
                     tools:text="Author: ilyas ipek" />
 
             </LinearLayout>
+
         </ScrollView>
 
         <Button
@@ -183,7 +175,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

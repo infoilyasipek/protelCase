@@ -14,9 +14,8 @@ fun View.gone(){
     this.visibility = View.GONE
 }
 
-
 fun Fragment.isNetworkAvailable(): Boolean {
-    return Constants.Functions.isNetworkAvailable(requireContext())
+    return requireContext().isNetworkAvailable()
 }
 
 fun Fragment.toast(s: String) {

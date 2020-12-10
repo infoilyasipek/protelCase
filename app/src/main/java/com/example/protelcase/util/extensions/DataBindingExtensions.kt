@@ -12,7 +12,6 @@ fun View.isVisible(isVisible: Boolean) {
     this.visibility = if (isVisible) View.VISIBLE else View.GONE
 }
 
-
 @BindingAdapter("imageUrl")
 fun ImageView.imageUrl(imageUrl: String?) {
     Glide.with(context)

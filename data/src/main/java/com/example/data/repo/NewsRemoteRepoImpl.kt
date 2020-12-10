@@ -14,4 +14,5 @@ class NewsRemoteRepoImpl @Inject constructor(private val newsService: NewsServic
             newsMapper.toNewsList(it)
         }
     }
+
 }

@@ -20,4 +20,5 @@ class NewsMapper @Inject constructor() {
             )
         }
     }
+
 }
